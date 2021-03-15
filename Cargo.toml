@@ -1,0 +1,23 @@
+[package]
+name = "valheim"
+description = "An application to wrap valheim_server that provides better logging and status"
+version = "0.1.0"
+authors = ["Maximilian Burszley <mburszley@gmail.com>"]
+edition = "2018"
+
+[build]
+target = "stable-x86_64-pc-windows-msvc"
+
+[dependencies]
+anyhow = "1.0.38"
+bindings = { path = "./bindings" }
+chrono = "0.4.19"
+crossbeam-channel = "0.5.0"
+crossterm = "0.19.0"
+ctrlc = { version = "3.1.8", features = ["termination"] }
+dotenv = "0.15.0"
+once_cell = "1.7.2"
+regex = "1.4.3"
+rpassword = "5.0.1"
+structopt = "0.3.21"
+tui = { version = "0.14.0", features = ["crossterm"], default-features = false }
